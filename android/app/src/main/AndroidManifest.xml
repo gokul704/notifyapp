@@ -30,6 +30,15 @@
             android:name="flutterEmbedding"
             android:value="2" />
     </application>
+    <service
+        android:label="notifications"
+        android:name="dk.cachet.notifications.NotificationListener"
+        android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE">
+        <intent-filter>
+            <action android:name="android.service.notification.NotificationListenerService" />
+        </intent-filter>
+    </service>
+</application>
     <!-- Required to query activities that can process text, see:
          https://developer.android.com/training/package-visibility?hl=en and
          https://developer.android.com/reference/android/content/Intent#ACTION_PROCESS_TEXT.
